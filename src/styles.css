@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color:#F7F7FF ; */
+    color: white;
+}
+
+.cardbg-color
+{
+    /* background-color: #B66D0D; */
+    background-color: #1E96FC;
+}
+body
+{
+    background-color: #0f1108;
+}
+
+/* color choices
+
+    1) saphire blue - #0B4F6C
+    2)dodger blue - #1E96FC
+    3)ghost white - #F7F7FF
+    4)black chocolate - #0f1108
+    5)international orange aerospace - #fe5d26
+*/
