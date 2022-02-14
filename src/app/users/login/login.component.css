@@ -1,0 +1,32 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+}
+
+main div:first-child
+{
+    flex-basis: 70%;
+    
+}
+
+main div:last-child
+{
+    flex-basis: 30%;
+}
+
+#login-section h3{
+    text-align: center;
+}
+
+#login-section input
+{
+    width: 80%;
+    margin: auto;
+    margin-top: 4px;
+    padding: 4px 8px;
+    /* border: none; */
+    outline: none;
+    border: 1px solid gray;
+    color: #111111;
+}

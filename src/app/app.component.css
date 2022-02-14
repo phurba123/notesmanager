@@ -6,9 +6,5 @@
     position: fixed;
     top: 0;
     left: 0;
-}
-
-nav
-{
-    height: 60px;
+    padding: 4px 6px;
 }

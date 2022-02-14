@@ -11,14 +11,14 @@ export class LoginComponent implements OnInit {
   constructor(private userService : UsersService) { }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe((res)=>
-    {
-      console.log('getting all users : ', res)
-    },
-    (err)=>
-    {
-      console.log('error on getting all users res : ', err)
-    })
+    // this.userService.getUsers().subscribe((res)=>
+    // {
+    //   console.log('getting all users : ', res)
+    // },
+    // (err)=>
+    // {
+    //   console.log('error on getting all users res : ', err)
+    // })
   }
 
 }

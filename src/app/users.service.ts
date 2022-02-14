@@ -15,4 +15,24 @@ export class UsersService {
   {
     return this.http.get(`${this.url}/all`);
   }
+
+  // register user
+  registerUser(data:any)
+  {
+    return this.http.post(`${this.url}/create`, data);
+  }
+
+  // login user
+  /**
+   * 
+   * @param data : include data, email and password
+   */
+  loginUser(data:any)
+  {
+    return this.http.post(`${this.url}/login`,data);
+  }
+
+  // logout user
+
+  // get single user with id
 }
