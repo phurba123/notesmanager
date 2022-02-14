@@ -4,7 +4,10 @@
     padding: 0;
     box-sizing: border-box;
     /* background-color:#F7F7FF ; */
-    color: white;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    font-family:  'Open Sans', sans-serif !important;
 }
 
 .cardbg-color
@@ -14,7 +17,55 @@
 }
 body
 {
-    background-color: #0f1108;
+    background-color: #0f2557;
+    color: #ffffff;
+}
+
+.txt-color-orange
+{
+    color:#f15048;
+}
+
+.h-font
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+main
+{
+    margin-top: 8vh;
+}
+
+.p-8
+{
+    padding: 8px;
+}
+
+.p-4
+{
+    padding: 4px;
+}
+
+.d-block
+{
+    display: block;
+}
+
+/* simple border */
+.border
+{
+    border: 1px solid gray;
+}
+
+/* black text color for light background */
+.text-dark
+{
+    color: #111111;
+}
+
+.txt-center
+{
+    text-align: center;
 }
 
 /* color choices
@@ -25,3 +76,45 @@ body
     4)black chocolate - #0f1108
     5)international orange aerospace - #fe5d26
 */
+
+/* 
+text sizes */
+
+.txt-12
+{
+    font-size: 12px;
+}
+
+.txt-14
+{
+    font-size: 14px;
+}
+
+.txt-18
+{
+    font-size: 18px;
+}
+
+.txt-24
+{
+    font-size: 24px;
+}
+
+/* 
+    global button css
+*/
+
+.btn-primary
+{
+    background: #f15048;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn-primary:hover
+{
+    background: #065c18;
+    transition: background 200ms ease;
+}
