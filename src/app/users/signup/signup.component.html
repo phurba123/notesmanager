@@ -2,13 +2,31 @@
     <!-- signup div -->
     <div class="div-center signup-div p-8">
         <h3 class="txt-18 txt-center">Sign Up</h3>
-        <input class="d-block text-dark mt-6 div-center" type="text" placeholder="FirstName*" required>
-        <input class="d-block text-dark mt-6 div-center" type="text" placeholder="MiddleName" >
-        <input class="d-block text-dark mt-6 div-center" type="text" placeholder="LastName" required>
-        <input class="d-block text-dark mt-6 div-center" type="text" placeholder="email*" required>
-        <input class="d-block text-dark mt-6 div-center" type="text" placeholder="password*" required>
+        <input [(ngModel)]="firstName" class="d-block text-dark mt-6 div-center" type="text" placeholder="FirstName*" autofocus required>
+        <input [(ngModel)]="middleName" class="d-block text-dark mt-6 div-center" type="text" placeholder="MiddleName" >
+        <input [(ngModel)]="lastName" class="d-block text-dark mt-6 div-center" type="text" placeholder="LastName" required>
+        <input [(ngModel)]="email" class="d-block text-dark mt-6 div-center" type="email" placeholder="email*" required>
+        <input [(ngModel)]="password" class="d-block text-dark mt-6 div-center" type="password" placeholder="password*"
+         (keyup.enter) = "signUp()" required>
 
-        <button class="btn-primary txt-14 d-block mt-8 div-center">Sign Up</button>
+        <button class="btn-primary txt-14 d-block mt-8 div-center" (click)="signUp()">Sign Up</button>
+
+        <!-- success registration mst -->
+        <div class="mt-8 success-clr" *ngIf="userRegistraionStatus">
+            <p class="txt-center txt-14">
+             <span>User Registered Successfully</span></p>
+        </div>
+
+        <!-- failed registration -->
+        <div class="mt-8 error-clr" *ngIf="userRegistraionStatus===false">
+            <p class="txt-center txt-14">
+             <span>User Registration failed</span></p>
+        </div>
+
+        <div class="mt-8">
+            <p class="txt-center txt-14">
+             <span class="txt-color-orange pointer" [routerLink]="['/']">Back to login</span></p>
+        </div>
 
         <!-- register block -->
         <!-- <div class="div-center txt-12 mt-8 mb-8">

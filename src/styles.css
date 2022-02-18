@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     /* background-color:#F7F7FF ; */
-    color: #ffffff;
     outline: none;
     border: none;
     font-family:  'Open Sans', sans-serif !important;
@@ -24,6 +23,16 @@ body
 .txt-color-orange
 {
     color:#f15048;
+}
+
+.error-clr
+{
+    color: #f00a15 !important;
+}
+
+.success-clr
+{
+    color:#065c18 !important;
 }
 
 .h-font
@@ -132,7 +141,7 @@ text sizes */
 
 .mt-6
 {
-    margin-top: 6px;
+    margin-top: 6px !important;
 }
 
 .mt-8
@@ -148,4 +157,9 @@ text sizes */
 .mb-8
 {
     margin-bottom: 8px;
+}
+
+.pointer
+{
+    cursor: pointer;
 }
