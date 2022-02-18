@@ -5,10 +5,19 @@
     <div id="login-section" class="p-4 border">
         <h3 class="txt-18">Login Here</h3>
 
-        <input class="d-block text-dark mt-6" type="text" placeholder="email" required>
-        <input class="d-block text-dark mt-6" type="text" placeholder="password" required>
+        <input [(ngModel)] ="email" class="d-block text-dark mt-6" type="text" placeholder="email" required>
+        <input [(ngModel)] = "password" class="d-block text-dark mt-6" type="text" placeholder="password"
+         (keyup.enter)="signInUser()" required>
 
-        <button class="btn-primary txt-14 d-block" style="margin: auto;margin-top: 8px;">Login</button>
+        <!-- failed display -->
+        <div class="mt-8 error-clr" *ngIf="loginFailed">
+            <p class="txt-center txt-14">
+             <span>{{loginFailedMsg}}</span></p>
+        </div>
+
+        <button class="btn-primary txt-14 d-block" style="margin: auto;margin-top: 8px;" (click)="signInUser()">
+            Login
+        </button>
 
         <!-- register block -->
         <div class="txt-center txt-12" style="margin-top: 8px;">
