@@ -118,3 +118,34 @@ text sizes */
     background: #065c18;
     transition: background 200ms ease;
 }
+
+.div-center
+{
+    margin: 0 auto 0 auto;
+}
+
+/* margins related */
+.mt-4
+{
+    margin-top: 4px;
+}
+
+.mt-6
+{
+    margin-top: 6px;
+}
+
+.mt-8
+{
+    margin-top: 8px;
+}
+
+.mb-4
+{
+    margin-bottom: 4px;
+}
+
+.mb-8
+{
+    margin-bottom: 8px;
+}

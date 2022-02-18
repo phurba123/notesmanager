@@ -1,0 +1,11 @@
+main .signup-div
+{
+    width: 30%;
+    border: 1px solid gray;
+}
+
+input
+{
+    width: 80%;
+    padding: 4px 8px;
+}
