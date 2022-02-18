@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { UsersService } from '../users.service';
 import { SignupComponent } from './signup/signup.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +15,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers:[UsersService]
 })
