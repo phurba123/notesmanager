@@ -26,3 +26,39 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     transition: box-shadow 200ms ease;
 }
+
+#noNotesDiv
+{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    margin: auto;
+}
+
+#noNotes
+{
+    margin: auto;
+}
+
+.addBtn
+{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+.addBtn button
+{
+    background-color: #f15048;
+    font-size: 24px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.addBtn button:hover
+{
+    background-color: #065c18;
+    color: white;
+    transition: all 200ms ease;
+}

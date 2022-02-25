@@ -7,61 +7,81 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  cardArray:any[];
+  allNoteTopics:any[];
+  showDialog:boolean=false;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.cardArray =[
-      {
-        id:1,
-        topic : 'Angular'
-      },
-      {
-        id : 2,
-        topic : 'Nodejs'
-      },
-      {
-        id : 3,
-        topic : 'Maths'
-      },
-      {
-        id:4,
-        topic : 'Angular'
-      },
-      {
-        id : 5,
-        topic : 'Nodejs'
-      },
-      {
-        id : 6,
-        topic : 'Maths'
-      },
-      {
-        id:1,
-        topic : 'Angular'
-      },
-      {
-        id : 2,
-        topic : 'Nodejs'
-      },
-      {
-        id : 3,
-        topic : 'Maths'
-      },
-      {
-        id:4,
-        topic : 'Angular'
-      },
-      {
-        id : 5,
-        topic : 'Nodejs'
-      },
-      {
-        id : 6,
-        topic : 'Maths'
-      }
-    ]
+    
   }
+
+  addNoteTopic()
+  {
+    this.showDialog = true;
+  }
+
+  dataFromDialog(data:any)
+  {
+    this.showDialog = false;
+    if(data.success)
+    {
+      // if user has entered a new topic then save it
+    }
+  }
+
+
+
+
+  // this.cardArray =[
+  //   {
+  //     id:1,
+  //     topic : 'Angular'
+  //   },
+  //   {
+  //     id : 2,
+  //     topic : 'Nodejs'
+  //   },
+  //   {
+  //     id : 3,
+  //     topic : 'Maths'
+  //   },
+  //   {
+  //     id:4,
+  //     topic : 'Angular'
+  //   },
+  //   {
+  //     id : 5,
+  //     topic : 'Nodejs'
+  //   },
+  //   {
+  //     id : 6,
+  //     topic : 'Maths'
+  //   },
+  //   {
+  //     id:1,
+  //     topic : 'Angular'
+  //   },
+  //   {
+  //     id : 2,
+  //     topic : 'Nodejs'
+  //   },
+  //   {
+  //     id : 3,
+  //     topic : 'Maths'
+  //   },
+  //   {
+  //     id:4,
+  //     topic : 'Angular'
+  //   },
+  //   {
+  //     id : 5,
+  //     topic : 'Nodejs'
+  //   },
+  //   {
+  //     id : 6,
+  //     topic : 'Maths'
+  //   }
+  // ]
 
 }

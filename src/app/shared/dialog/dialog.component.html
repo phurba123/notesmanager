@@ -1,0 +1,16 @@
+<div *ngIf="title" class="p-4" style="z-index: 100;background-color: #f15048;border-radius: 4px;">
+    <h3 style="text-align: center;">{{title}}</h3>
+
+    <!-- if text area needed for like huge text -->
+    <textarea *ngIf="isTextArea" type="text" [placeholder]="placeholder || 'enter'" class="d-block p-4" 
+      style="width: 80%;margin: 10px auto 0 auto;" [(ngModel)]="singleNote"></textarea>
+
+      <!-- if simple input is needed then use this -->
+      <input *ngIf="!isTextArea" type="text" [placeholder]="placeholder || 'enter'" class="d-block p-4" 
+      style="width: 80%;margin: 10px auto 0 auto;" [(ngModel)]="topic">
+
+    <div style="width: 80%;display: flex;justify-content: space-between;margin:10px auto">
+        <button class="cancel-btn pointer" (click)="btnClicked(false)">Cancel</button>
+        <button class="save-btn pointer" (click)="btnClicked(true)">Save</button>
+    </div>
+</div>

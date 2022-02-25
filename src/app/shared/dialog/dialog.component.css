@@ -1,0 +1,13 @@
+.cancel-btn
+{
+    background-color: rgb(252, 15, 15);
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+.save-btn
+{
+    background-color: #065c18;
+    padding: 4px 8px;
+    border-radius: 2px;
+}

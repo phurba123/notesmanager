@@ -1,11 +1,34 @@
 
 <main>
     
-    <div id="card-container">
+    <div *ngIf="allNoteTopics" id="card-container">
         <!-- card ff-->
-        <div class="card pointer" *ngFor="let card of cardArray">
-            <h3 class="txt-color-orange" style="margin: auto;">{{card.topic}}</h3>
+        <div class="card pointer" *ngFor="let note of allNoteTopics">
+            <h3 class="txt-color-orange" style="margin: auto;font-weight: 500;">{{note.topic}}</h3>
         </div>
+    </div>
+
+    <!-- if no notes is present then show this section -->
+    <div id="noNotesDiv" *ngIf="!allNoteTopics">
+        <div id="noNotes" class="txt-color-orange txt-center txt-24">
+            You haven't created any notes <br> Lets start by creating one
+        </div>
+    </div>
+
+    <!-- button to add a new note -->
+    <div class="addBtn">
+
+        <button class="pointer" (click)="addNoteTopic()">+</button>
+
+    </div>
+
+    <!-- dialog box -->
+    <div class="dialog-box" *ngIf="showDialog">
+        <app-dialog class="dialog" [title]="'Add New Topic To Your Collection'"
+            [placeholder]="'Enter Topic Title'" [isTextArea]="false" [purpose]="'newTopic'" 
+            (data)="dataFromDialog($event)">
+
+        </app-dialog>
     </div>
 </main>
 
