@@ -205,3 +205,24 @@ text sizes */
     color: white;
     transition: all 200ms ease;
 }
+
+/* scroll bar related */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #0f2557; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #f15048; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(221, 51, 42); ; 
+  }

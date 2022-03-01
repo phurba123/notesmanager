@@ -8,7 +8,9 @@
         <h1 style="text-transform: capitalize;" class="txt-center txt-color-orange">{{currentNoteInfo[0].topic}}</h1>
 
         <div *ngIf = "currentNoteInfo[0].notes.length > 0" class="noteContainer">
-            <p *ngFor = "let note of currentNoteInfo[0].notes;let currentIndex=index;">{{currentIndex+1}} - {{note.noteDesc}}</p>
+            <p *ngFor = "let note of currentNoteInfo[0].notes;let currentIndex=index;trackBy : trackNotes">
+                <span class="txt-color-orange">{{currentIndex+1}} - </span>{{note.noteDesc}}
+            </p>
         </div>
 
         <div *ngIf="currentNoteInfo[0].notes.length == 0 || currentNoteInfo[0].notes.length < 0" class="noteContainer">

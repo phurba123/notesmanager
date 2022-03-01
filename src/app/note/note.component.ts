@@ -95,6 +95,11 @@ export class NoteComponent implements OnInit,OnDestroy {
     this._onDestroy.complete();
   }
 
+  trackNotes(index:any, items:any)
+  {
+    return index;
+  }
+
   
 
 }
