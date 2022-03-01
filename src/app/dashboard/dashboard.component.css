@@ -5,8 +5,8 @@
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
-    justify-content: space-around;
     padding: 0 4px;
+    column-gap: 90px;
 
 }
 
@@ -38,27 +38,4 @@
 #noNotes
 {
     margin: auto;
-}
-
-.addBtn
-{
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-}
-
-.addBtn button
-{
-    background-color: #f15048;
-    font-size: 24px;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-}
-
-.addBtn button:hover
-{
-    background-color: #065c18;
-    color: white;
-    transition: all 200ms ease;
 }

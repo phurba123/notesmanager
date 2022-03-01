@@ -182,3 +182,26 @@ text sizes */
     width: 30vw;
     margin: auto;
 }
+
+.addBtn
+{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+.addBtn button
+{
+    background-color: #f15048;
+    font-size: 24px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.addBtn button:hover
+{
+    background-color: #065c18;
+    color: white;
+    transition: all 200ms ease;
+}

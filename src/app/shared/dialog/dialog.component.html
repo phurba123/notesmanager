@@ -11,6 +11,6 @@
 
     <div style="width: 80%;display: flex;justify-content: space-between;margin:10px auto">
         <button class="cancel-btn pointer" (click)="btnClicked(false)">Cancel</button>
-        <button class="save-btn pointer" (click)="btnClicked(true)">Save</button>
+        <button class="save-btn pointer" (click)="btnClicked(true)" [disabled]="!singleNote && !topic">Save</button>
     </div>
 </div>

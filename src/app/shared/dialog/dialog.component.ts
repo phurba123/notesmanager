@@ -34,6 +34,14 @@ export class DialogComponent implements OnInit {
         })
 
       }
+      else if(this.purpose === 'newNote')
+      {
+        console.log('save and newnote')
+        this.data.emit({
+          note : this.singleNote,
+          success : true
+        })
+      }
     }
     else
     {
@@ -41,6 +49,13 @@ export class DialogComponent implements OnInit {
       {
         this.data.emit({
           topic : null,
+          success : false
+        })
+      }
+      else if(this.purpose === 'newNote')
+      {
+        this.data.emit({
+          note : null,
           success : false
         })
       }

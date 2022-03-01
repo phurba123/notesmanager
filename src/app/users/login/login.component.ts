@@ -42,7 +42,16 @@ export class LoginComponent implements OnInit {
         }
         else
         {
+          console.log('res : ', res)
           //login successfull
+          let data=
+          {
+            userId:res.data.userDetails._id,
+            token:res.data.authToken,
+            email:res.data.userDetails.email
+          };
+          console.log('datat : ', data)
+          this.userService.setInfo(data);
           this.router.navigate(['dashboard']);
         }
       },

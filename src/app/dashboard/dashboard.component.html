@@ -3,7 +3,7 @@
     
     <div *ngIf="allNoteTopics" id="card-container">
         <!-- card ff-->
-        <div class="card pointer" *ngFor="let note of allNoteTopics">
+        <div class="card pointer" *ngFor="let note of allNoteTopics" (click)="goToNote(note)">
             <h3 class="txt-color-orange" style="margin: auto;font-weight: 500;">{{note.topic}}</h3>
         </div>
     </div>

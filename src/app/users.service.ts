@@ -36,4 +36,26 @@ export class UsersService {
   // logout user
 
   // get single user with id
+
+
+  // set user info on localstorage
+  setInfo(data : any)
+  {
+    localStorage.setItem('39dk29dkoox', data.userId);
+    localStorage.setItem('hhhfstodk88efkjn', data.token);
+    localStorage.setItem('fjsdkfemailfkd',data.email);
+
+  }
+
+  //getInfo
+  getInfo()
+  {
+    let data=
+    {
+      _id : localStorage.getItem('39dk29dkoox'),
+      email:localStorage.getItem('fjsdkfemailfkd'),
+      token : localStorage.getItem('hhhfstodk88efkjn')
+    }
+    return data;
+  }
 }

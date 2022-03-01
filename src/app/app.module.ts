@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { UsersModule } from './users/users.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from './shared/shared.module';
+import { NoteComponent } from './note/note.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule,

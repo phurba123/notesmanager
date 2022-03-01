@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { NotesService } from '../notes.service';
+import { takeUntil } from 'rxjs/operators';
+import { Subject,pipe } from 'rxjs';
+import { UsersService } from '../users.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,9 +15,19 @@ export class DashboardComponent implements OnInit {
   allNoteTopics:any[];
   showDialog:boolean=false;
 
-  constructor() { }
+  private _onDestry = new Subject();
+
+  constructor(
+    private noteService : NotesService,
+    private userService : UsersService,
+    private router : Router
+  ) 
+  { }
 
   ngOnInit(): void {
+
+    // gettin all topics of user
+    this.findAllTopics();
     
   }
 
@@ -27,7 +42,56 @@ export class DashboardComponent implements OnInit {
     if(data.success)
     {
       // if user has entered a new topic then save it
+      console.log('data when success : ', data);
+      let note =
+      {
+        userId : this.userService.getInfo()._id,
+        topic : data.topic
+      };
+
+      this.noteService.createNoteTopic(note).pipe(takeUntil(this._onDestry)).subscribe((res:any)=>
+      {
+        console.log('res : ', res);
+        if(res.error)
+        {
+          console.log('failed to create new topic');
+          //TODO handle this later
+        }
+        else
+        {
+          this.findAllTopics();
+        }
+      },
+      (err)=>
+      {
+        console.log('err : ', err);
+      })
     }
+    else
+    {
+      console.log('data when canceled : ', data)
+    }
+  }
+
+  // finding all notes
+  findAllTopics()
+  {
+    this.noteService.getAllTopics(this.userService.getInfo()._id)
+    .pipe(takeUntil(this._onDestry)).subscribe((topics:any)=>
+    {
+      console.log('topics : ', topics);
+      this.allNoteTopics = topics.data;
+    },
+    (err)=>
+    {
+      console.log('err : ', err);
+    })
+  }
+
+  goToNote(note : any)
+  {
+    console.log('current note : ', note)
+    this.router.navigate(['view', note._id]);
   }
 
 
@@ -83,5 +147,11 @@ export class DashboardComponent implements OnInit {
   //     topic : 'Maths'
   //   }
   // ]
+
+  ngOnDestroy()
+  {
+    this._onDestry.next();
+    this._onDestry.complete();
+  }
 
 }
